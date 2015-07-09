@@ -34,8 +34,8 @@ Dieses Modul ermöglicht das einfache Debugging von E-Mails im OXID eShop.
 ## 2. Vorbereitungen
 1. Als Git submodule einbinden:  
 `git submodule add -f https://github.com/suabo/dd_email_debugger.git modules/digidesk/dd_email_debugger`
-
-2. `tmp/` leeren
+2. Vendormetadata erstellen, wenn es das erste Submodul des Herstellers ist `echo "<?php" > modules/digidesk/vendormetadata.php`
+3. `tmp/` leeren
 
 ## 3. Installation
 
