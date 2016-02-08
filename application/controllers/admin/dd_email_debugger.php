@@ -29,6 +29,11 @@ class dd_email_debugger extends oxAdminView
      */
     protected $_oConf = null;
 
+    /**
+     * E-Mail Attachments
+     * @var array
+     */ 
+    protected $_aAttachments = null;
 
     protected $_aMailTemplates = array(
         'order_cust'        => 'Bestellbestätigung an den Kunden',
@@ -110,6 +115,9 @@ class dd_email_debugger extends oxAdminView
                 $blPrepareSuccessful = $oEmail->sendDummyWishlistMail();
                 break;
         }
+
+        // set Attachments
+        $this->_aAttachments = $oEmail->getAttachments();
 
         if( $blPrepareSuccessful )
         {
