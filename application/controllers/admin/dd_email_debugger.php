@@ -139,4 +139,8 @@ class dd_email_debugger extends oxAdminView
             }
         }
     }
+    
+    public function getAttachments() {
+        return $this->_aAttachments;
+    }    
 }
