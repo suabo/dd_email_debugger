@@ -57,6 +57,15 @@
                     </div>
                 </div>
             </form>
+            
+            <ul class="list-unstyled row">
+            [{foreach from=$oView->getAttachments() item=oAttachment}]
+                <li class="col-xs-4">
+                    <strong><a title="[{$oAttachment.0}]">[{$oAttachment.1}]</a></strong><br>
+                    <span class="glyphicon glyphicon-file [{$oAttachment.3}]"></span> <small class="badge">[{$oAttachment.3}]</small>
+                </li>
+            [{/foreach}]
+            </ul>            
 
             [{if $aEdit.html_preview || $aEdit.plain_preview}]
                 <hr/>
